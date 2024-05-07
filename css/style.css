@@ -101,8 +101,13 @@ form.location input[type="submit"]{
 /****** SEARCH FILTERS ******/
 #fltr-container{
     display: flex;
-    font-weight: 550;
+    font-weight: 500;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+#fltr-container p{
+    flex-basis: 100%;
 }
 
 #fltr-container .fltr{
