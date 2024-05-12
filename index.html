@@ -21,24 +21,29 @@
                     <a href="#activites">Activités</a>
                 </nav>
             </header>
-            <div class="recherche">
-                <h1>Trouvez votre hébergement pour des vacances des rêve</h1>
-                <p>En plein centre-ville ou en pleine nature</p>
-                <form class="location" method="post">
-                    <i class="fa-solid fa-location-dot fa-sm"></i>
-                    <input type="text" placeholder="Marseille, France" name="ville" id="ville">
-                    <input type="submit" value="Rechercher">
-                </form>
-            </div>
-            <div id="fltr-container">
-                <p> Filtres
-                    <button class="fltr"><i class="fa-solid fa-money-bill-wave"></i> Économique</button>
-                    <button class="fltr"><i class="fa-solid fa-person"></i> Familial</button>
-                    <button class="fltr"><i class="fa-solid fa-heart"></i> Romantique</button>
-                    <button class="fltr"><i class="fa-solid fa-fire"></i> Nos pépites</button>
-                    <p><i class="fa-solid fa-circle-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
-                </p>
-            </div>
+            <section class="recherche">
+                <div class="recherche-title">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                </div>
+                <div class="recherche-subtitle">
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </div>
+                <div class="search-form">
+                    <form class="location" method="post">
+                        <i class="fa-solid fa-location-dot fa-sm"></i>
+                        <input type="text" placeholder="Marseille, France" name="ville" id="ville">
+                        <input type="submit" value="Rechercher">
+                    </form>
+                </div>
+                <div id="filters">
+                    <h2>Filtres</h2>
+                    <button><i class="fa-solid fa-money-bill-wave"></i> Économique</button>
+                    <button><i class="fa-solid fa-person"></i> Familial</button>
+                    <button><i class="fa-solid fa-heart"></i> Romantique</button>
+                    <button><i class="fa-solid fa-fire"></i> Nos pépites</button>
+                    <p class="tooltip"><i class="fa-solid fa-circle-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section>
             <main>
                 <div class="hebergements-and-populaires">
                     <section id=hebergements class="hebergements">
