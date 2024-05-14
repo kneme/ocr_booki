@@ -61,10 +61,11 @@ a {
 
 /****** Header ******/
 header{
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 .header-logo img{
@@ -76,9 +77,8 @@ header{
 }
 
 .header-right a{
-    margin: 0 30px;
+    margin-left: 60px;
     padding: 15px 0;
-
 }
 
 .header-right a:hover{
@@ -180,6 +180,7 @@ h1{
     flex-basis: 100%;
     margin-top: 30px;
     font-weight: 100;
+    margin-bottom: 35px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -230,7 +231,6 @@ h1{
 }
 
 .hebergements-cards .card-content{
-    height: 45%;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
@@ -333,13 +333,12 @@ h1{
 }
 
 .activites-cards .card-content{
-    height: 10%;
     padding-left: 15px;
 }
 
 .activites-cards .card-title{
     margin-top: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 /****** Footer ***********/
