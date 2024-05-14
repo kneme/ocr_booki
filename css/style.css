@@ -314,19 +314,20 @@ h1{
 }
 
 .activites-cards a{
-    width: 24%;
+    width: 23%;
+    height: 400px;
 }
 
 .activites-cards{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .activites-cards .card{
     padding: 0;
-    height: 450px;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -339,6 +340,7 @@ h1{
 
 .activites-cards .card-content{
     padding-left: 15px;
+    height: 12%;
 }
 
 .activites-cards .card-title{
