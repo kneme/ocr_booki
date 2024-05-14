@@ -68,7 +68,7 @@ header{
 }
 
 .header-logo img{
-    width: 50px;
+    width: 60px;
 }
 
 .header-right{
@@ -78,6 +78,7 @@ header{
 .header-right a{
     margin: 0 30px;
     padding: 15px 0;
+
 }
 
 .header-right a:hover{
@@ -86,7 +87,7 @@ header{
     padding-top: 13px;
 }
 
-/****** Search form******/
+/****** Search form ******/
 h1{
     font-size: 22px;
     margin-bottom: 7px;
@@ -103,21 +104,21 @@ h1{
 }
 
 .search-form .location i{
-    padding: 25px 18px;
+    padding: 23px 15px;
     border-start-start-radius: 15px;
     border-end-start-radius: 15px;
     background-color: var(--main-bg-color);
-    font-size: 19px;
+    font-size: 17px;
     color: black;
 }
 
 .search-form .location input{
-    width: 190px;
+    width: 180px;
     border: 1px solid var(--main-bg-color);
     border-right: none;
     font-weight: 600;
     text-align: center;
-    font-size:18px;
+    font-size:17px;
 }
 
 .search-form .location input::placeholder{
@@ -133,7 +134,8 @@ h1{
     border-end-end-radius: 15px;
     background-color: var(--main-color);
     color: white;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 /****** Search filters ******/
@@ -318,6 +320,7 @@ h1{
 }
 
 .activites-cards .card{
+    padding: 0;
     height: 450px;
     display: flex;
     flex-direction: column;
