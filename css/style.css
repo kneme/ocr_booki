@@ -339,6 +339,9 @@ h1{
 }
 
 .activites-cards .card-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-left: 15px;
     height: 12%;
 }
