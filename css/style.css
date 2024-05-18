@@ -97,13 +97,22 @@ h1{
     margin: 0;
 }
 
-.search-form .location{
+.search-form .desktop{
+    width: 377px;
+}
+
+.search-form .desktop,
+.search-form .mobile{
+    height: 49px;
     display: flex;
+    align-items: center;
     margin: 30px 0 25px 0;
 }
 
-.search-form .location i{
-    padding: 23px 15px;
+.search-form .desktop i,
+.search-form .mobile i{
+    width: 50px;
+    height: 100%;
     border-start-start-radius: 15px;
     border-end-start-radius: 15px;
     background-color: var(--main-bg-color);
@@ -114,31 +123,65 @@ h1{
     justify-content: center;
 }
 
-.search-form .location input{
-    width: 180px;
+.search-form .desktop input{
+    width: 195px;
+}
+
+.search-form .desktop input,
+.search-form .mobile input{
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
     border: 1px solid var(--main-bg-color);
     border-right: none;
     font-weight: 700;
-    text-align: center;
     font-size: 18px;
 }
 
-.search-form .location input::placeholder{
+.search-form .desktop input::placeholder,
+.search-form .mobile input::placeholder{
     color: black;
     opacity: 1;
 }
 
-.search-form .location input[type="submit"]{
-    width: 130px;
+.search-form .desktop input[type="submit"]{
+    height: 100%;
+    width: 132px;
     border: none;
-    padding: 10px;
+    padding-left: 5px;
     border-start-end-radius: 15px;
     border-end-end-radius: 15px;
     background-color: var(--main-color);
     color: white;
     font-weight: 700;
-    font-size: 18px;
-    text-align: center;
+}
+
+.search-form .mobile{
+    width: 391px;
+}
+
+.search-form .mobile input{
+    width: 292px;
+}
+
+.search-form .mobile button[type="submit"]{
+    height: 100%;
+    position: relative;
+    right: 14px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.search-form .mobile button i{
+    height: 100%;
+    width: 49px;
+    box-sizing: border-box;
+    border-start-end-radius: 15px;
+    border-end-end-radius: 15px;
+    background-color: var(--main-color);
+    color: white;
 }
 
 /****** Search filters ******/
@@ -467,7 +510,15 @@ footer{
     }
 }
 
+@media (width > 767.98px){
+    .search-form .mobile{
+        display: none;
+    }
+}
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .search-form .desktop{
+        display: none;
+    }
 }
