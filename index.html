@@ -14,7 +14,14 @@
     </head>
     <body>
         <div class="main-container">
-            <header>
+            <header class="desktop">
+                <a class="header-logo" href="#accueil"><img src="images/logo/Booki.png" alt="Logo Booki"></a>
+                <nav class="header-right">
+                    <a href="#hebergements">Hébergements</a>
+                    <a href="#activites">Activités</a>
+                </nav>
+            </header>
+            <header class="mobile">
                 <a class="header-logo" href="#accueil"><img src="images/logo/Booki.png" alt="Logo Booki"></a>
                 <nav class="header-right">
                     <a href="#hebergements">Hébergements</a>
@@ -44,7 +51,17 @@
                         </button>
                     </form>
                 </div>
-                <div id="filters">
+                <div id="desktop-filters">
+                    <h2>Filtres</h2>
+                    <div class="filters-buttons">
+                        <button><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
+                        <button><i class="fa-solid fa-person"></i>Familial</button>
+                        <button><i class="fa-solid fa-heart"></i>Romantique</button>
+                        <button><i class="fa-solid fa-fire"></i>Nos pépites</button>
+                    </div>
+                    <p class="tooltip"><i class="fa-solid fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+                <div id="mobile-filters">
                     <h2>Filtres</h2>
                     <div class="filters-buttons">
                         <button><i class="fa-solid fa-money-bill-wave"></i>Économique</button>

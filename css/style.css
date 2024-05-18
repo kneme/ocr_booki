@@ -60,31 +60,63 @@ a {
 }
 
 /****** Header ******/
-header{
+header.desktop{
     display: flex;
     justify-content: space-between;
 }
 
-.header-logo img{
+.desktop .header-logo img{
     padding: 30px;
     padding-left: 0;
     width: 61px;
 }
 
-.header-right{
+.desktop .header-right{
     display: flex;
     flex-wrap: wrap;
 }
 
-.header-right a{
+.desktop .header-right a{
     margin-left: 68px;
     padding: 15px 0;
 }
 
-.header-right a:hover{
+.desktop .header-right a:hover{
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
     padding-top: 13px;
+}
+
+header.mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile .header-logo img{
+    padding: 30px;
+    padding-bottom: 10px;
+    width: 61px;
+}
+
+.mobile .header-right{
+    display: flex;
+    width: 100%;
+}
+
+.mobile .header-right a{
+    padding: 15px 0;
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--main-bg-color);
+
+}
+
+.mobile .header-right a:hover{
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 13px;
+    color: var(--main-color);
 }
 
 /****** Search form ******/
@@ -185,28 +217,33 @@ h1{
 }
 
 /****** Search filters ******/
-#filters{
+#desktop-filters,
+#mobile-filters{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-#filters h2{
+#desktop-filters h2,
+#mobile-filters h2{
     font-size: 17px;
     margin-right: 13px;
 }
 
-#filters .filters-buttons{
+#desktop-filters .filters-buttons,
+#mobile-filters .filters-buttons{
     display: flex;
     flex-wrap: wrap; 
 }
 
-#filters button i{
+#desktop-filters button i,
+#mobile-filters button i{
     font-size: 22px;
     margin-right: 10px;
 }
 
-#filters button{
+#desktop-filters button,
+#mobile-filters button{
     display: flex;
     margin: 8px 8px 8px 0;
     padding: 12px 18px;
@@ -218,11 +255,13 @@ h1{
     font-size: 17px;
 }
 
-#filters button:hover{
+#desktop-filters button:hover,
+#mobile-filters button:hover{
     background-color: var(--filter-bg-color);
 }
 
-#filters .tooltip i{
+#desktop-filters .tooltip i,
+#mobile-filters .tooltip i{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,12 +273,24 @@ h1{
     font-size: 11px;
 }
 
-#filters .tooltip{
+#desktop-filters .tooltip{
+    margin-bottom: 35px;
+}
+
+#desktop-filters .tooltip,
+#mobile-filters .tooltip{
     flex-basis: 100%;
     margin-top: 30px;
-    margin-bottom: 35px;
     display: flex;
     align-items: center;
+}
+
+#mobile-filters .tooltip{
+    margin-bottom: 0;
+}
+
+#mobile-filters button{
+    flex: 1 1 0;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -511,14 +562,97 @@ footer{
 }
 
 @media (width > 767.98px){
+    header.mobile{
+        display: none;
+    }
+
     .search-form .mobile{
+        display: none;
+    }
+
+    #mobile-filters{
         display: none;
     }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .main-container{
+        padding: 0;
+    }
+    
+    header.desktop{
+        display: none;
+    }
+
+    .recherche{
+        margin-top: 33px;
+        padding: 0 20px;
+    }
+
     .search-form .desktop{
         display: none;
+    }
+
+    #desktop-filters{
+        display: none;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+    
+    .hebergements-and-populaires section[class="hebergements"]{
+        background-color: white;
+    }
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .populaires{
+        margin: 33px 0;
+    }
+
+    .populaires-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires-cards a{
+        width: 100%;
+    }
+
+    .hebergements-cards{
+        gap: 15px
+    }
+
+    .hebergements-rows{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hebergements h4{
+        margin-top: 20px;
+    }
+
+    .activites-cards{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .activites-cards a{
+        width: 100%;
+    }
+
+    .activites-cards img{
+        height: 141px
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
     }
 }
