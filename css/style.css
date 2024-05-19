@@ -22,6 +22,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -60,63 +61,30 @@ a {
 }
 
 /****** Header ******/
-header.desktop{
+header{
     display: flex;
     justify-content: space-between;
 }
 
-.desktop .header-logo img{
+header .header-logo img{
     padding: 30px;
     padding-left: 0;
     width: 61px;
 }
 
-.desktop .header-right{
+header .header-right{
     display: flex;
-    flex-wrap: wrap;
 }
 
-.desktop .header-right a{
+header .header-right a{
     margin-left: 68px;
     padding: 15px 0;
 }
 
-.desktop .header-right a:hover{
+header .header-right a:hover{
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
     padding-top: 13px;
-}
-
-header.mobile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mobile .header-logo img{
-    padding: 30px;
-    padding-bottom: 10px;
-    width: 61px;
-}
-
-.mobile .header-right{
-    display: flex;
-    width: 100%;
-}
-
-.mobile .header-right a{
-    padding: 15px 0;
-    flex: 1 1 0;
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid var(--main-bg-color);
-
-}
-
-.mobile .header-right a:hover{
-    border-bottom: 2px solid var(--main-color);
-    padding-bottom: 13px;
-    color: var(--main-color);
 }
 
 /****** Search form ******/
@@ -143,7 +111,7 @@ h1{
 
 .search-form .desktop i,
 .search-form .mobile i{
-    width: 50px;
+    width: 70px;
     height: 100%;
     border-start-start-radius: 15px;
     border-end-start-radius: 15px;
@@ -189,11 +157,12 @@ h1{
 }
 
 .search-form .mobile{
-    width: 391px;
+    width: 104%;
+    max-width: 399px;
 }
 
 .search-form .mobile input{
-    width: 292px;
+    width: 100%;
 }
 
 .search-form .mobile button[type="submit"]{
@@ -204,6 +173,7 @@ h1{
     border: none;
     background-color: transparent;
     outline: none;
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.2));
 }
 
 .search-form .mobile button i{
@@ -217,34 +187,28 @@ h1{
 }
 
 /****** Search filters ******/
-#desktop-filters,
-#mobile-filters{
+#filters{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-#desktop-filters h2,
-#mobile-filters h2{
+#filters h2{
     font-size: 17px;
     margin-right: 13px;
 }
 
-#desktop-filters .filters-buttons,
-#mobile-filters .filters-buttons{
+#filters .filters-buttons,
+#filters .filters-rows{
     display: flex;
-    flex-wrap: wrap; 
 }
 
-#desktop-filters button i,
-#mobile-filters button i{
-    font-size: 22px;
+#filters button i{
+    font-size: 20px;
     margin-right: 10px;
 }
 
-#desktop-filters button,
-#mobile-filters button{
-    display: flex;
+#filters button{
     margin: 8px 8px 8px 0;
     padding: 12px 18px;
     border-radius: 25px;
@@ -255,13 +219,11 @@ h1{
     font-size: 17px;
 }
 
-#desktop-filters button:hover,
-#mobile-filters button:hover{
+#filters button:hover{
     background-color: var(--filter-bg-color);
 }
 
-#desktop-filters .tooltip i,
-#mobile-filters .tooltip i{
+#filters .tooltip i{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,24 +235,12 @@ h1{
     font-size: 11px;
 }
 
-#desktop-filters .tooltip{
+#filters .tooltip{
     margin-bottom: 35px;
-}
-
-#desktop-filters .tooltip,
-#mobile-filters .tooltip{
     flex-basis: 100%;
     margin-top: 30px;
     display: flex;
     align-items: center;
-}
-
-#mobile-filters .tooltip{
-    margin-bottom: 0;
-}
-
-#mobile-filters button{
-    flex: 1 1 0;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -562,27 +512,53 @@ footer{
 }
 
 @media (width > 767.98px){
-    header.mobile{
-        display: none;
-    }
-
     .search-form .mobile{
-        display: none;
-    }
-
-    #mobile-filters{
         display: none;
     }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
+    .search-form .desktop{
+        display: none;
+    }
+
     .main-container{
         padding: 0;
     }
-    
-    header.desktop{
-        display: none;
+
+    .card{
+        filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.1));
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .header-logo img{
+        padding: 30px;
+        padding-bottom: 10px;
+    }
+
+    header .header-right{
+        width: 100%;
+    }
+
+    header .header-right a{
+        padding: 13px 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 0;
+        border-bottom: 2px solid var(--main-bg-color);
+    }
+
+    header .header-right a:hover{
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+        padding-bottom: 13px;
+        color: var(--main-color);
     }
 
     .recherche{
@@ -590,29 +566,56 @@ footer{
         padding: 0 20px;
     }
 
-    .search-form .desktop{
-        display: none;
+    #filters h2{
+        font-size: 18px;
     }
 
-    #desktop-filters{
-        display: none;
+    #filters .filters-buttons{
+        width: 100%;
+        max-width: 385px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #filters .filters-rows{
+        gap: 10px;
+    }
+
+    #filters button i{
+        font-size: 15px;
+    }
+
+    #filters button{
+        margin: 0;
+        font-size: 14px;
+        display: flex;
+        flex: 1 1 0;
+    }
+
+    #filters .tooltip{
+        margin-bottom: 0;
     }
 
     .hebergements-and-populaires section {
         border-radius: 0;
+        padding: 20px;
     }
     
     .hebergements-and-populaires section[class="hebergements"]{
         background-color: white;
     }
 
-    .hebergements-and-populaires {
+    .hebergements-and-populaires{
         display: flex;
         flex-direction: column-reverse;
     }
 
     .populaires{
-        margin: 33px 0;
+        margin: 33px 0 15px 0;
+    }
+
+    .populaires-title{
+        margin-bottom: 10px;
     }
 
     .populaires-cards{
@@ -622,6 +625,14 @@ footer{
 
     .populaires-cards a{
         width: 100%;
+    }
+
+    .populaires-cards .card{
+        margin: 7px 0;
+    }
+
+    .hebergements-title{
+        margin-bottom: 15px;
     }
 
     .hebergements-cards{
@@ -636,6 +647,11 @@ footer{
     
     .hebergements h4{
         margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .activites{
+        margin: 27px;
     }
 
     .activites-cards{
@@ -649,6 +665,11 @@ footer{
 
     .activites-cards img{
         height: 141px
+    }
+
+    footer{
+        margin-top: 65px;
+        padding: 10px 40px;
     }
 
     .footer-container{
