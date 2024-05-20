@@ -158,7 +158,8 @@ h1{
 
 .search-form .mobile{
     width: 104%;
-    max-width: 399px;
+    max-width: 391px;
+    min-width: 320px;
 }
 
 .search-form .mobile input{
@@ -224,6 +225,7 @@ h1{
 }
 
 #filters .tooltip i{
+    min-width: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -511,7 +513,7 @@ footer{
     }
 }
 
-@media (width > 767.98px){
+@media (width > 768px){
     .search-form .mobile{
         display: none;
     }
@@ -572,7 +574,8 @@ footer{
 
     #filters .filters-buttons{
         width: 100%;
-        max-width: 385px;
+        max-width: 376px;
+        min-width: 308px;
         flex-direction: column;
         gap: 20px;
     }
@@ -651,7 +654,7 @@ footer{
     }
 
     .activites{
-        margin: 27px;
+        margin: 25px;
     }
 
     .activites-cards{
@@ -669,7 +672,7 @@ footer{
 
     footer{
         margin-top: 65px;
-        padding: 10px 40px;
+        padding: 10px 25px;
     }
 
     .footer-container{
