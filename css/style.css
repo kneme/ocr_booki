@@ -520,7 +520,7 @@ footer{
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 768px) {
+@media (width < 768px) {
     .search-form .desktop{
         display: none;
     }
