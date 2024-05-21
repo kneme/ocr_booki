@@ -513,7 +513,7 @@ footer{
     }
 }
 
-@media (width > 768px){
+@media (width >= 768px){
     .search-form .mobile{
         display: none;
     }
