@@ -159,7 +159,7 @@ h1{
 .search-form .mobile{
     width: 104%;
     max-width: 391px;
-    min-width: 320px;
+    min-width: 292px;
 }
 
 .search-form .mobile input{
@@ -564,7 +564,7 @@ footer{
     }
 
     .recherche{
-        margin-top: 33px;
+        margin-top: 30px;
         padding: 0 20px;
     }
 
@@ -575,7 +575,6 @@ footer{
     #filters .filters-buttons{
         width: 100%;
         max-width: 376px;
-        min-width: 308px;
         flex-direction: column;
         gap: 20px;
     }
@@ -590,6 +589,7 @@ footer{
 
     #filters button{
         margin: 0;
+        padding: 12px 13px;
         font-size: 14px;
         display: flex;
         flex: 1 1 0;
