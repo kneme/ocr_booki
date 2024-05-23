@@ -318,7 +318,7 @@ h1{
     margin-bottom: 5px;
 }
 
-.hebergements h4{
+.hebergements h3{
     margin: 40px 0 0 0;
     display: inline-block;
 }
@@ -395,10 +395,12 @@ h1{
     height: 100%;
     display: flex;
     flex-direction: column;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.1));
+
 }
 
 .activites-cards img{
-    height: 370px;
+    height: 360px;
     border-start-start-radius: 15px;
     border-start-end-radius: 15px;
 }
@@ -421,7 +423,7 @@ footer{
     width: 100%;
     max-width: 1440px;
     margin-top: 50px;
-    padding: 0 20px;
+    padding: 0 20px 10px;
     box-sizing: border-box;
     background-color: var(--main-bg-color);
 }
