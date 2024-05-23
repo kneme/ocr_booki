@@ -292,7 +292,7 @@ h1{
 }
 
 .hebergements-rows img{
-    height: 124px;
+    height: 114px;
     border-start-start-radius: 15px;
     border-start-end-radius: 15px;
 }
@@ -319,7 +319,7 @@ h1{
 }
 
 .hebergements h4{
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
     display: inline-block;
 }
 
@@ -336,7 +336,7 @@ h1{
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -398,7 +398,7 @@ h1{
 }
 
 .activites-cards img{
-    height: 380px;
+    height: 370px;
     border-start-start-radius: 15px;
     border-start-end-radius: 15px;
 }
