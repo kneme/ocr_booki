@@ -485,17 +485,22 @@ footer{
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 45px;
     }
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 28px;
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 100%;
+    }
+
+    .populaires-cards .card {
+        margin-top: 20px;
     }
 
     .populaires-cards .card-title {
@@ -506,12 +511,20 @@ footer{
         font-size: 13px;
     }
 
+    .activites{
+        margin-top: 40px;
+    }
+
     .activites-cards img{
-        height: 200px;
+        height: 190px;
     }
 
     .activites-cards .card-content{
         height: 70px;
+    }
+
+    footer{
+        margin-top: 60px;
     }
 }
 
