@@ -79,6 +79,7 @@ header .header-right{
 header .header-right a{
     margin-left: 68px;
     padding: 15px 0;
+    height: 20px
 }
 
 header .header-right a:hover{
