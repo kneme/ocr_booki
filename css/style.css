@@ -510,11 +510,6 @@ footer{
     }
 }
 
-@media (width >= 768px){
-    .search-form .mobile{
-        display: none;
-    }
-}
 
 /* Small devices (phones, less than 768px) */
 @media (width < 768px) {
@@ -595,8 +590,8 @@ footer{
 
     .search-form .search-btn .mobile-search-btn{
         display: block;
-
     }
+    
     .search-form .search-btn .mobile-search-btn i{
         background-color: transparent;
         color: white;
