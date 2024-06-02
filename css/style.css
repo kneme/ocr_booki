@@ -75,16 +75,16 @@ header .header-logo{
 header .header-right ul{
     list-style: none;
     margin: 0;
+    padding: 15px 0;
     display: flex;
 }
 
-header .header-right li{
+header .header-right a{
     margin-left: 68px;
     padding: 15px 0;
-    height: 20px
 }
 
-header .header-right li:hover{
+header .header-right a:hover{
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
     padding-top: 13px;
@@ -544,6 +544,10 @@ footer{
     }
 
     header .header-right li{
+        width: 50%;
+    }
+
+    header .header-right a{
         margin: 0;
         padding: 13px 0;
         display: flex;
@@ -552,7 +556,7 @@ footer{
         border-bottom: 2px solid var(--main-bg-color);
     }
 
-    header .header-right li:hover{
+    header .header-right a:hover{
         border-top: none;
         border-bottom: 2px solid var(--main-color);
         padding-bottom: 13px;
